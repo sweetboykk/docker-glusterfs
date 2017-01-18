@@ -190,7 +190,7 @@ func (d *glusterfsDriver) unmountVolume(target string) error {
 	return nil
 }
 
-func (d glusterfsDriver) Capabilities(r volume.Request) volume.Response {
+func (d glusterfsDriver) Capabilities(r volume.MountRequest) volume.Response {
        var res volume.Response
        res.Capabilities = volume.Capability{Scope: "local"}
        return res
